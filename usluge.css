@@ -1,0 +1,430 @@
+.usluge-div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(40px, 8vw, 80px);
+    background-color: #ffffff;
+    padding: clamp(40px, 5vw, 80px) clamp(20px, 5vw, 60px);
+}
+
+.usluge-text{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.usluge-naslov{
+    font-size: clamp(45px, 5vw, 67px);
+    color: #FFD400;
+    font-weight: 900;
+    font-family: 'Poppins', serif;
+    margin: 0;
+}
+
+.kartica{
+    display:flex;
+    flex-direction:column;
+    border: 3px solid #CEC38F;
+    
+    max-width: 500px;
+    padding: clamp(25px, 4vw, 49px);
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(127, 127, 127, 0.09);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.kartica:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(127, 127, 127, 0.5);
+}
+.usluge-kartice{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(35px, 5vw, 130px);
+    
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 clamp(10px, 2vw, 20px);
+    box-sizing: border-box;
+}
+.kartice-slika{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: clamp(10px, 2vw, 20px);
+    flex-shrink: 0;
+}
+
+.slika{
+    height: clamp(50px, 8vw, 65px);
+    width: clamp(50px, 8vw, 65px);
+}
+.gornjideo-kartice{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.kartice-naslov{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kartice-naslov p{
+    font-size: clamp(22px, 2.5vw, 45px);
+    font-weight: 400;
+    color: black;
+    margin: 0;
+    font-family: 'Hanuman', serif;
+}
+
+.donjideo-kartice{
+    display: flex;
+    flex-direction: column;
+}
+
+.donjideo-kartice p{
+    font-family: 'Hanuman', serif;
+    font-size: clamp(19px, 1.8vw, 22px);
+    color: #434343;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.drugi-deo-usluge{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    gap: 60px;
+    
+}
+
+.drugi-deo-usluge-tekst{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.drugi-deo-usluge-tekst p:first-child{
+    font-family:'Hanuman', serif;
+    font-size: clamp(28px, 2vw, 59px);
+    color: #7D7D7D;
+    margin: 0;
+    font-weight: 400;
+}
+
+.drugi-deo-usluge-tekst p:nth-child(2){
+    font-size: clamp(48px, 6vw, 72px);
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    font-family: 'Hanuman', serif;
+}
+
+.drugi-deo-usluge-tekst p:nth-child(3){
+   font-family:'Hanuman', serif;
+    font-size: clamp(28px, 2vw, 59px);
+    color: #7D7D7D;
+    margin: 0;
+    font-weight: 500;
+}
+
+.drugi-deo-usluge-dugme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.strelica-cenovnik  {
+    width: clamp(80px, 15vw, 120px);
+    height: clamp(80px, 15vw, 120px);
+}
+.dugme-usluge{
+    background-color: #FFD400;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: clamp(15px, 2vw, 24px) clamp(60px, 15vw, 167px);
+    font-size: clamp(16px, 2.5vw, 34px);
+    border-radius: 52px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    font-family: 'Hanuman', serif;
+    white-space: nowrap;
+     
+}
+
+.dugme-usluge:hover{
+    background-color: #ffd900;
+    box-shadow: 0 6px 20px rgba(255, 213, 0, 0.889);
+    transform: translateY(-2px);
+    transition: 0.3s  ease;
+}
+.dugme-usluge:active {
+            transform: translateY(0px);
+            box-shadow: 0 2px 10px rgba(255, 212, 0, 0.3);
+}
+.drugi-deo-usluge-dugme p{
+    font-family: 'Hanuman', serif;
+    font-size: clamp(18px, 2vw, 22px);
+    color: #000000;
+    margin: 0;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Tableti - 1024px i manji */
+@media (max-width: 1024px) {
+    .usluge-kartice {
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(25px, 4vw, 40px);
+    }
+    
+    .kartica {
+        padding: clamp(20px, 3vw, 30px);
+    }
+}
+
+/* Mali ekrani - 768px i manji */
+@media (max-width: 768px) {
+    .usluge-div {
+        gap: clamp(30px, 5vw, 50px);
+        padding: clamp(30px, 4vw, 50px) clamp(15px, 3vw, 30px);
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .usluge-kartice {
+        grid-template-columns: 1fr;
+        gap: clamp(20px, 3vw, 30px);
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .kartica {
+        width: 100%;
+        max-width: 100%;
+        padding: clamp(18px, 3vw, 25px);
+        box-sizing: border-box;
+    }
+    
+    .gornjideo-kartice {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        text-align: center;
+        gap: clamp(15px, 3vw, 20px);
+    }
+    
+    .kartice-slika {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    
+    .kartice-naslov p {
+        font-size: clamp(18px, 2.2vw, 28px);
+    }
+    
+    .donjideo-kartice p {
+        font-size: clamp(14px, 1.6vw, 18px);
+    }
+}
+
+/* Mali ekrani - 768px i manji */
+@media (max-width: 768px) {
+    .usluge-kartice {
+        grid-template-columns: 1fr;
+        gap: clamp(20px, 3vw, 30px);
+    }
+    
+    .kartica {
+        width: 100%;
+        max-width: 100%;
+        padding: clamp(20px, 3vw, 30px);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 12px;
+        -webkit-touch-callout: none;
+    }
+    
+    .kartica:active {
+        transform: scale(0.98);
+        background-color: rgba(244, 196, 48, 0.05);
+    }
+    
+    .gornjideo-kartice {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
+
+    .kartice-slika {
+        transition: all 0.3s ease;
+    }
+    
+    .kartica:active .kartice-slika {
+        transform: scale(1.05);
+    }
+    
+    .kartice-naslov p {
+        font-size: clamp(22px, 2.5vw, 33px);
+    }
+    
+    .donjideo-kartice p {
+        font-size: clamp(14px, 1.8vw, 18px);
+    }
+    
+    .drugi-deo-usluge {
+        margin-top: clamp(40px, 8vw, 80px);
+        gap: clamp(40px, 6vw, 60px);
+    }
+    
+    .dugme-usluge {
+        padding: clamp(14px, 2vw, 18px) clamp(50px, 12vw, 100px);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        -webkit-touch-callout: none;
+    }
+    
+    .dugme-usluge:active {
+        transform: scale(0.95);
+    }
+
+    .strelica-cenovnik {
+        width: clamp(70px, 12vw, 100px);
+        height: clamp(70px, 12vw, 100px);
+        transition: transform 0.3s ease;
+    }
+    
+    .dugme-usluge:active .strelica-cenovnik {
+        transform: scale(0.95);
+    }
+}
+
+/* Mobilni - 480px i manji */
+@media (max-width: 480px) {
+    .usluge-div {
+        gap: clamp(25px, 4vw, 35px);
+        padding: clamp(25px, 3vw, 35px) clamp(12px, 2vw, 16px);
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    
+    .usluge-text {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .usluge-naslov {
+        font-size: clamp(28px, 5vw, 40px);
+        margin-bottom: clamp(10px, 2vw, 15px);
+    }
+    
+    .usluge-kartice {
+        grid-template-columns: 1fr;
+        gap: clamp(15px, 3vw, 25px);
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .kartica {
+        width: 100%;
+        max-width: 100%;
+        padding: clamp(12px, 2vw, 16px);
+        border: 2px solid #CEC38F;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .gornjideo-kartice {
+        flex-direction: row;
+        align-items: flex-start;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        gap: 8px;
+    }
+    
+    .kartice-slika {
+        margin-right: 0;
+        flex-shrink: 0;
+        min-width: 40px;
+    }
+    
+    .slika {
+        height: 40px;
+        width: 40px;
+        flex-shrink: 0;
+    }
+    
+    .kartice-naslov p {
+        font-size: clamp(14px, 1.8vw, 18px);
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+    
+    .donjideo-kartice p {
+        font-size: clamp(12px, 1.4vw, 14px);
+        line-height: 1.4;
+        color: #434343;
+        word-wrap: break-word;
+    }
+    
+    .drugi-deo-usluge {
+        margin-top: clamp(20px, 4vw, 35px);
+        gap: clamp(15px, 3vw, 25px);
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .drugi-deo-usluge-tekst {
+        gap: clamp(6px, 1vw, 10px);
+        width: 100%;
+    }
+    
+    .drugi-deo-usluge-tekst p:first-child {
+        font-size: clamp(14px, 1.6vw, 20px);
+    }
+    
+    .drugi-deo-usluge-tekst p:nth-child(2) {
+        font-size: clamp(24px, 3.5vw, 36px);
+    }
+    
+    .drugi-deo-usluge-tekst p:nth-child(3) {
+        font-size: clamp(14px, 1.6vw, 20px);
+    }
+    
+    .dugme-usluge {
+        padding: clamp(10px, 1.5vw, 14px) clamp(30px, 8vw, 50px);
+        font-size: clamp(12px, 1.8vw, 16px);
+        width: auto;
+        white-space: nowrap;
+    }
+    
+    .drugi-deo-usluge-dugme p {
+        font-size: clamp(12px, 1.6vw, 16px);
+    }
+    
+    .strelica-cenovnik {
+        width: clamp(50px, 8vw, 70px);
+        height: clamp(50px, 8vw, 70px);
+    }
+}

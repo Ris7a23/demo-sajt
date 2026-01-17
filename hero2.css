@@ -1,0 +1,289 @@
+/* HERO SECTION */
+.hero2 {
+    position: relative;
+    min-height: 100vh;
+    background-image: url("slike/hero2-pozadina.png"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    padding-left: clamp(20px, 8vw, 80px);
+    padding-top: 70px;
+    overflow: hidden;
+}
+/* TAMNI GRADIJENT */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0) 60%,
+        rgba(0,0,0,0.15) 80%,
+        rgba(0,0,0,0.35) 100%
+    );
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-overlay {
+        background: linear-gradient(
+            to right,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0) 50%,
+            rgba(0,0,0,0.2) 75%,
+            rgba(0,0,0,0.4) 100%
+        );
+    }
+}
+
+
+/* HERO CONTENT */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 2;
+    animation: slideInLeft 0.8s ease-out;
+    width: 100%;
+    max-width: 700px;
+    padding-top: 60px;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* TEKST I LINJA - FLEX */
+.text-with-line {
+    display: flex;
+    gap: 0;
+    width: 100%;
+}
+
+/* LINIJU VEŽEMO ZA VISINU TEKSTA */
+.accent-line {
+    display: none;
+}
+
+/* TEKSTUALNI BLOK */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 15px;
+    margin: 0;
+    padding-left: 20px;
+    border-left: 5px solid #FFD400;
+    
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: clamp(36px, 5.5vw, 72px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0;
+    letter-spacing: -1px;
+    font-family: "Poppins", serif;
+}
+
+.hero-text p {
+    font-family: "Poppins", serif;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(14px, 1.8vw, 22px);
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 300;
+    max-width: 280px;
+}
+
+/* DUGME - ispod teksta, ne deo linije */
+.hero-btn {
+    font-family: "Poppins", serif;
+    display: inline-block;
+    padding: 20px 100px;
+    background-color: #FFD400;
+    color: #ffffff;
+    border: none;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 70px;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    font-size: 27px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.hero-btn:hover {
+    background-color: #e6bf00;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(255, 212, 0, 0.3);
+}
+
+.hero-btn:active {
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .hero2 {
+        padding-left: 40px;
+    }
+    
+    .hero-content {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero2 {
+        padding-left: 30px;
+        padding-right: 20px;
+        background-position: right center;
+        background-attachment: scroll;
+        min-height: 90vh;
+    }
+
+    .text-with-line {
+        gap: 14px;
+    }
+
+    .accent-line {
+        width: 4px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(32px, 6vw, 48px);
+        max-width: 100%;
+    }
+
+    .hero-text p {
+        font-size: clamp(14px, 3vw, 18px);
+        max-width: 100%;
+    }
+
+    .hero-btn {
+        padding: 14px 32px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero2 {
+        padding-left: 20px;
+        padding-right: 20px;
+        background-position: 80% center;
+        min-height: 80vh;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        padding-top: 40px;
+    }
+
+    .text-with-line {
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .accent-line {
+        width: 3px;
+        height: 40px;
+        align-self: flex-start;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(26px, 7vw, 36px);
+        max-width: 220px;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        font-size: clamp(13px, 3.5vw, 16px);
+        max-width: 100%;
+    }
+
+    .hero-btn {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero2 {
+        padding-left: 16px;
+        padding-right: 16px;
+        background-position: 85% center;
+        min-height: 75vh;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        gap: 20px;
+        padding-top: 30px;
+    }
+
+    .text-with-line {
+        gap: 10px;
+    }
+
+    .accent-line {
+        width: 3px;
+        height: 35px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(22px, 6.5vw, 32px);
+        line-height: 1.25;
+        max-width: 200px;
+    }
+
+    .hero-text p {
+        font-size: clamp(12px, 3vw, 14px);
+    }
+
+    .hero-btn {
+        padding: 11px 24px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero2 {
+        padding-left: 14px;
+        padding-right: 14px;
+        min-height: 70vh;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        padding-top: 25px;
+    }
+
+    .hero-text h1 {
+        font-size: 20px;
+        max-width: 180px;
+    }
+
+    .hero-text p {
+        font-size: 11px;
+    }
+
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}

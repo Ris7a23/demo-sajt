@@ -1,0 +1,251 @@
+
+
+
+
+
+
+.cenovnik{
+    background-color: #2c2a2a;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(60px, 8vw, 130px) clamp(20px, 5vw, 60px);
+}
+
+.cenovnik-naslov {
+    text-align: center;
+    display: inline-block;
+    margin-bottom: clamp(40px, 6vw, 80px);
+    border-bottom: 6px solid #FFD400;
+    
+
+    padding-bottom: clamp(25px, 4vw, 30px);
+    width: 47%;
+}
+
+.cenovnik-naslov p{
+    font-family: 'Poppins', serif;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    font-size: clamp(40px, 5vw, 90px);
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.cenovnik-tabele{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(60px, 10vw, 180px);
+    
+    max-width: 1400px;
+    margin-bottom: clamp(40px, 6vw, 80px);
+    padding: clamp(30px, 5vw, 57px);
+}
+
+.tabela-grupa {
+    display: flex;
+    flex-direction: column;
+}
+
+.tabela-naslov {
+    padding-top:100px;
+    margin-bottom: clamp(8px, 1.5vw, 15px);
+}
+
+.tabela-naslov p {
+    color: #FFD400;
+    font-family: 'Poppins', serif;
+    font-size: clamp(22px, 2vw, 88px);
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 0.07em;
+}
+
+.levi-deo{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+
+.levi-deo-usluga {
+    font-family:'Montserrat', sans-serif;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.levi-deo-cena {
+    font-family:'Montserrat', sans-serif;
+    flex: 0 0 auto;
+    min-width: 80px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    padding-left: clamp(40px, 5vw, 100px);
+}
+
+.levi-deo-usluga p, .levi-deo-cena p{
+    color: white;
+    
+    font-size: clamp(22px, 1.8vw, 30px);
+    margin: 0;
+    padding: clamp(12px, 1.5vw, 18px) 0;
+    
+    line-height: 1.5;
+    font-family: 'Hanuman', serif;
+    border-bottom: 3px dashed #FFD400;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.levi-deo-usluga p:last-child, .levi-deo-cena p:last-child {
+    border-bottom: none;
+}
+
+.cenovnik-decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(20px, 4vw, 40px);
+    margin-top: clamp(40px, 6vw, 80px);
+    width: 100%;
+}
+
+.deco-line {
+    background: linear-gradient(90deg, transparent, #FFD400, transparent);
+    height: clamp(4px, 0.5vw, 6px);
+    border-radius: 3px;
+}
+
+.deco-line-1 {
+    width: clamp(100px, 12vw, 150px);
+}
+
+.deco-line-2 {
+    width: clamp(150px, 18vw, 220px);
+    height: clamp(5px, 0.6vw, 7px);
+    opacity: 0.9;
+}
+
+.deco-line-3 {
+    width: clamp(100px, 12vw, 150px);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+    .cenovnik-tabele {
+        grid-template-columns: 1fr;
+        gap: clamp(50px, 8vw, 100px);
+    }
+}
+
+@media (max-width: 768px) {
+    .cenovnik {
+        padding: clamp(40px, 6vw, 80px) clamp(30px, 5vw, 80px);
+    }
+    
+    .cenovnik-naslov {
+         border-bottom: 2px solid #FFD400;
+         width:57%;
+        margin-bottom: clamp(30px, 5vw, 50px);
+        padding-bottom: clamp(20px, 3vw, 30px);
+        transition: all 0.3s ease;
+    }
+
+    .cenovnik-tabele {
+        grid-template-columns: 1fr;
+        gap: clamp(40px, 6vw, 80px);
+        padding: clamp(20px, 4vw, 50px);
+    }
+    
+    .tabela-cenovnika {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        -webkit-touch-callout: none;
+    }
+    
+    .tabela-cenovnika:active {
+        background-color: rgba(244, 196, 48, 0.1);
+        transform: translateY(-2px);
+    }
+    
+    .levi-deo-usluga p, .levi-deo-cena p {
+        font-size: clamp(14px, 1.6vw, 18px);
+        padding: clamp(10px, 1.2vw, 14px) 0;
+        transition: all 0.2s ease;
+    }
+    
+    .tabela-cenovnika:active .levi-deo-usluga p,
+    .tabela-cenovnika:active .levi-deo-cena p {
+        color: #f4c430;
+    }
+    
+    .deco-line {
+        height: clamp(2px, 0.3vw, 3px);
+    }
+    
+    .deco-line-1 {
+        width: clamp(90px, 85vw, 120px);
+    }
+    
+    .deco-line-2 {
+        width: clamp(120px, 90vw, 150px);
+        height: clamp(2.5px, 0.4vw, 3.5px);
+    }
+    
+    .deco-line-3 {
+        width: clamp(80px, 85vw, 100px);
+    }
+}
+
+@media (max-width: 480px) {
+    .cenovnik {
+        padding: clamp(30px, 4vw, 50px) clamp(12px, 2vw, 20px);
+    }
+    
+    .cenovnik-naslov {
+        margin-bottom: clamp(25px, 5vw, 40px);
+        padding-bottom: clamp(15px, 2vw, 20px);
+    }
+    
+    .cenovnik-naslov p {
+        font-size: clamp(28px, 5vw, 45px);
+        letter-spacing: 0.05em;
+    }
+    
+    .cenovnik-tabele {
+        grid-template-columns: 1fr;
+        gap: clamp(25px, 4vw, 40px);
+        padding: 0;
+        width: 100%;
+    }
+    
+    .levi-deo {
+        flex-direction: row;
+        width: 100%;
+    }
+    
+    .levi-deo-usluga {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .levi-deo-cena {
+        flex: 0 0 auto;
+        min-width: 60px;
+        text-align: right;
+        padding-left: clamp(10px, 1.5vw, 15px);
+    }
+    
+    .levi-deo-usluga p, .levi-deo-cena p {
+        font-size: clamp(13px, 1.5vw, 16px);
+        padding: clamp(10px, 1.2vw, 14px) 0;
+        line-height: 1.3;
+    }
+}

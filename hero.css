@@ -1,0 +1,197 @@
+        .hero {
+            min-height: 100vh;
+            background-image: url("slike/hero-slika.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-bottom: 40px;
+            position: relative;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+        }
+
+       .naslov-hero {
+            font-family: 'Hanuman', serif;
+            display: flex;
+            flex-direction: column;
+            padding-left: clamp(20px, 5vw, 80px);
+            gap: 0px; /* very small gap so subtitles sit right under the title */
+            padding-top: clamp(30px, 10vh, 100px);
+            position: relative;
+            z-index: 2;
+        }
+
+        .Kod_kefija {
+            height: auto;
+            font-size: clamp(48px, 12vw, 100px);
+            margin:0; /* snug against subtitles */
+            padding: 0;
+            font-family: 'Hanuman', serif;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+            line-height: 1.1;
+        }
+
+        .kod-text{
+            color: white;
+            letter-spacing: 0.1em;
+        }
+
+        .kefija-text{
+            color: #FFD400;
+            letter-spacing: 0.1em;
+        }
+
+        .podnaslov1,
+        .podnaslov2 {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-size: clamp(16px, 3vw, 30px);
+            color: white;
+            margin-bottom: 3px;
+            padding: 0;
+            font-family: 'Hanuman', serif;
+            font-weight: 200;
+            line-height: 1.05; /* tighter lines */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .div-dugme{
+            padding-top: clamp(180px, 12vh, 220px); /* keep the button farther down */
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding-right: clamp(20px, 5vw, 80px);
+            box-sizing: border-box;
+        }
+        
+       .dugme-hero {
+            padding: clamp(14px, 2vh, 18px) clamp(40px, 8vw, 110px);
+            font-size: clamp(16px, 2.2vw, 26px);
+            font-weight: 700;
+            color: rgb(254, 254, 254);
+            background-color: #FFD400;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-family: 'Hanuman', serif;
+            
+            white-space: nowrap;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            min-height: 44px; 
+            min-width: 100px;
+        }
+        
+        .dugme-hero:hover{
+            background-color: #ffda1a;
+            color: rgb(254, 254, 254);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 213, 0, 0.889);
+        }
+
+        .dugme-hero:active {
+            transform: translateY(0px);
+            box-shadow: 0 2px 10px rgba(255, 212, 0, 0.3);
+        }
+
+        /* Mobile responsiveness - Tablet */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 100vh;
+                justify-content: center;
+                padding-bottom: 20px;
+                background-attachment: scroll;
+            }
+
+            .naslov-hero {
+                padding-left: clamp(15px, 5vw, 40px);
+                padding-top: 20px;
+                gap: 0px;
+            }
+
+            .Kod_kefija {
+                height: auto;
+                font-size: clamp(40px, 10vw, 65px);
+                margin: 0;
+                padding: 0;
+                font-weight: 700;
+            }
+
+            .podnaslov1,
+            .podnaslov2 {
+                font-size: clamp(14px, 2.5vw, 22px);
+                margin-bottom: 2px;
+            }
+
+            .div-dugme {
+                padding-top: clamp(60px, 10vh, 120px);
+            }
+
+            .dugme-hero {
+                padding: 12px clamp(100px, 6vw, 130px);
+                font-size: clamp(15px, 2vw, 19px);
+                cursor: pointer;
+                transition: all 0.3s ease;
+                -webkit-touch-callout: none;
+            }
+            
+            .dugme-hero:active {
+                transform: scale(0.95);
+                box-shadow: 0 2px 8px rgba(255, 213, 0, 0.3);
+            }
+        }
+
+        /* Mobile responsiveness - Phone */
+        @media (max-width: 480px) {
+            .hero {
+                min-height: 100vh;
+                justify-content: center;
+                padding-bottom: 20px;
+            }
+
+            .naslov-hero {
+                padding-left: clamp(12px, 4vw, 25px);
+                padding-top: 15px;
+                gap: 2px;
+            }
+
+            .Kod_kefija {
+                font-size: clamp(32px, 9vw, 50px);
+                font-weight: 700;
+                margin: 0;
+            }
+
+            .podnaslov1,
+            .podnaslov2 {
+                font-size: clamp(13px, 2.2vw, 16px);
+                margin-bottom: 1px;
+                font-weight: 400;
+            }
+
+            .div-dugme {
+                padding-top: clamp(30px, 8vh, 10px);
+                padding-left: clamp(2px, 4vw, 0px);
+            }
+
+            .dugme-hero {
+                padding: 14px clamp(20px, 5vw, 130px);
+                font-size: clamp(13px, 2vw, 15px);
+                font-weight: 700;
+            }
+        }

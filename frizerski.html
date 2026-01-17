@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kod Kefija</title>
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="usluge.css">
+    <link rel="stylesheet" href="cenovnik.css">
+    <link rel="stylesheet" href="hero2.css">
+    <link rel="stylesheet" href="lokacija.css">
+    <link rel="stylesheet" href="galerija.css">
+    <link rel="stylesheet" href="foter.css">
+
+    <script src="scroll.js" defer></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Manufacturing+Consent&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Hanuman:wght@100..900&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Hanuman:wght@100..900&family=Manufacturing+Consent&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Hanuman:wght@100..900&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Hanuman:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Manufacturing+Consent&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        p{
+            margin: 0;
+        }
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Optimizacija za mobilne uređaje */
+        @media (max-width: 768px) {
+            html {
+                scroll-behavior: smooth;
+            }
+        }
+
+        /* Smanjenje animacija za uređaje koji to žele */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Touch-friendly klik targeting */
+        button, a {
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="header">
+        <a href="#" class="logo-link">
+            <div class="logo-header">
+                <p>Kod Kefija</p>
+            </div>
+        </a>
+        <nav class="meni">
+            <a href="#lokacija"><p>Lokacija</p></a>
+            <a href="#cenovnik"><p>Cenovnik</p></a>
+            <a href="#galerija"><p>Galerija</p></a>
+            <a href="#kontakt"><p>Kontakt</p></a>
+        </nav>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="meni-mobile" id="meniMobile">
+            <a href="#lokacija"><p>Lokacija</p></a>
+            <a href="#cenovnik"><p>Cenovnik</p></a>
+            <a href="#galerija"><p>Galerija</p></a>
+            <a href="#kontakt"><p>Kontakt</p></a>
+        </nav>
+    </div>
+
+
+
+    <div class="hero">
+        <div class="naslov-hero">
+            <div>
+            <div><p class="Kod_kefija"><span class="kod-text">Kod</span> <span class="kefija-text">Kefija</span></p></div>
+            <p class="podnaslov1">Tvoj stil,nasa vestina.</p>
+            <p class="podnaslov2">Brzo i bez cekanja</p>
+            </div>
+            
+            <div class="div-dugme">
+                <button class="dugme-hero">Zakaži termin</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+        <div id="usluge" class="usluge-div">
+            <div class="usluge-text">
+                <p class="usluge-naslov">Usluge</p>
+            </div>
+            <div class="usluge-kartice">
+                <div class="kartica">
+                    <div class="gornjideo-kartice">
+                        <div class="kartice-slika">
+                            <img class="slika" src="slike/slika-karice-makazice.png">
+                        </div>
+                            <div class="kartice-naslov">
+                                <p>Sisanje</p>
+                            </div>
+                    </div>
+                        <div class="donjideo-kartice">
+                            <p>Profesionalno šišanje prilagođeno obliku glave i tvom ličnom stilu.</p>
+                        </div>
+                </div>
+
+                <div class="kartica">
+                    <div class="gornjideo-kartice">
+                        <div class="kartice-slika">
+                            <img class="slika" src="slike/Group 3.png">
+                        </div>
+                            <div class="kartice-naslov">
+                                <p>Sredjivanje brade</p>
+                            </div>
+                    </div>
+                        <div class="donjideo-kartice">
+                            <p>Detaljno oblikovanje brade uz precizne linije i uredan završetak.</p>
+                        </div>
+                </div>
+
+
+                <div class="kartica">
+                    <div class="gornjideo-kartice">
+                        <div class="kartice-slika">
+                            <img class="slika" src="slike/slika-karice-makazice.png">
+                        </div>
+                            <div class="kartice-naslov">
+                                <p>Dečije šišanje</p>
+                            </div>
+                    </div>
+                        <div class="donjideo-kartice">
+                            <p>Strpljivo i pažljivo šišanje kako bi dete izašlo zadovoljno i nasmejano.</p>
+                        </div>
+                </div>
+
+
+                <div class="kartica">
+                    <div class="gornjideo-kartice">
+                        <div class="kartice-slika">
+                            <img class="slika" src="slike/Group 34.png">
+                        </div>
+                            <div class="kartice-naslov">
+                                <p>Brijanje</p>
+                            </div>
+                    </div>
+                        <div class="donjideo-kartice">
+                            <p>Klasično brijanje za potpuno svež osećaj.</p>
+                        </div>
+                </div>
+            </div>
+
+         <div class="drugi-deo-usluge">
+            <div class="drugi-deo-usluge-tekst">
+                <p class=>Preko</p>
+                <p class=>200</p>
+                <p class=>zadovoljnih klijenata</p>
+            </div>
+
+                <div class="drugi-deo-usluge-dugme">
+                    <button class="dugme-usluge">Zakaži odmah</button>
+                    <p>Pogledaj cenovnik</p>
+                   <a href="#cenovnik"> <img class="strelica-cenovnik" src="slike/strelica-cenovnik.png"></a> 
+                </div>
+                
+        </div>
+
+    </div>
+
+
+
+    <div id="cenovnik" class="cenovnik">
+        <div class="cenovnik-naslov">
+            <p>CENOVNIK</p>
+        </div>
+        
+
+
+        <div class="cenovnik-tabele">
+           <div class="tabela-grupa">
+               <div class="tabela-naslov">
+                    <p>Sisanje</p>
+               </div>
+               <div class="levi-deo">
+               
+                    <div class="levi-deo-usluga">
+                        
+                        <p>Fade</p>
+                        <p>Fade</p>
+                        <p>Fade</p>
+                        <p>Fade</p>
+                        <p>Fade</p>
+                        <p>Fade</p>
+                        <p>Fade</p>
+                    </div>
+                    <div class="levi-deo-cena">
+                        <p>1200 RSD</p>
+                        <p>1200 RSD</p>
+                        <p>1200 RSD</p>
+                        <p>1200 RSD</p>
+                        <p>1200 RSD</p>
+                        <p>1200 RSD</p>
+                        <p>1200 RSD</p>
+                    </div>
+
+               </div>
+           </div>
+
+           <div class="tabela-grupa">
+               <div class="tabela-naslov">
+                    <p>Brada</p>
+               </div>
+               <div class="levi-deo">
+               
+                    <div class="levi-deo-usluga">
+                        <p>Haircut including ear hair/eyebrow trimming</p>
+                       <p>Haircut including ear hair/eyebrow trimming</p>
+                       <p>Haircut including ear hair/eyebrow trimming</p>
+                       <p>Haircut including ear hair/eyebrow trimming</p>
+                       <p>Haircut including ear hair/eyebrow trimming</p>
+                       <p>Haircut including ear hair/eyebrow trimming</p>
+                       <p>Haircut including ear hair/eyebrow trimming</p>
+
+                    </div>
+                    <div class="levi-deo-cena">
+                        <p>1200 RSD</p>
+                        <p>1200 RSD</p>
+                        <p>1200 RSD</p>
+                        <p>1200 RSD</p>
+                        <p>1200 RSD</p>
+                        <p>1200 RSD</p>
+                        <p>1200 RSD</p>
+                    </div>
+
+               </div>
+           </div>
+
+        </div>
+                       
+        <div class="cenovnik-decoration">
+            <div class="deco-line deco-line-1"></div>
+            <div class="deco-line deco-line-2"></div>
+            <div class="deco-line deco-line-3"></div>
+        </div>
+</div>
+
+    </div>
+
+
+   <div class="hero2">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="text-with-line">
+            <div class="accent-line"></div>
+            <div class="hero-text">
+                <h1>Detalji koji prave razliku.</h1>
+                <p>Svaka frizura rađena precizno, bez žurbe.</p>
+            </div>
+        </div>
+        <button class="hero-btn">Pogledaj nase radove</button>
+    </div>
+</div>
+
+
+
+<div id="lokacija" class="lokacija">
+    <div class="naslov">
+        <p>Lokacija</p>
+    </div>
+
+    <div class="lokacija-sadrzaj">
+        <div class="tekst">
+            <div class="gore">
+                <div class="adresa">
+                    <img class="ikona-lokacija" src="slike/ikonica-lokacija.png">
+                    <p>Carigradska 8,Radinac, Smederevo</p>
+                </div>
+                        <div class="konatkt">
+                            <img class="ikona-telefon" src="slike/ikonica-mobilni.png">
+                            <p>+381 63 1234567</p>
+                            <img class="ikona-email" src="slike/ikonica-mail.png">
+                            <p>info@frizerskisalon.com</p>
+                        </div>
+            </div>
+                <div class="dole">
+
+                    <div class="radno-vreme-div">
+                        <div class="radno-vreme-naslov"><p >radno vreme</p></div>
+                        <div class="radno-vreme-tekst">
+                            <p>Pon-Sub: 08:00 - 18:00</p>
+                            <p>Nedelja-zatvoreno</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-brzo">
+                        <p>Zakazi termin brzo i jednostavno!</p>
+                    </div>
+                    <div class="dugmici">
+                        <button class="dugme-lokacija1">Pozovi nas</button>
+                        <button class="dugme-lokacija2">
+                            <img class="ig-logo" src="slike/iglogo.png">
+                            <p>Instagram DM</p>
+                        </button>
+                    </div>
+
+                </div>
+        </div>
+        
+
+
+
+
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11429.683248439454!2d20.96426953063862!3d44.62294664098361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4750950030c32115%3A0xf7631aa4dc103cd8!2sFrizerski%20salon%20KOD%20KEFIJA!5e1!3m2!1ssr!2srs!4v1768160670733!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+       
+    </div>
+     
+</div>  
+     
+
+  <div id="galerija" class="galerija">
+    <div class="galerija-naslov">
+        <p>Galerija</p>
+    </div>
+    <div class="galerija-slike">
+        <img class="slika-galerija visible" src="slike/slika-hero.jpg" alt="Radovi 1">
+        <img class="slika-galerija visible" src="slike/slika-hero.jpg" alt="Radovi 2">
+        <img class="slika-galerija visible" src="slike/slika-hero.jpg" alt="Radovi 3">
+        <img class="slika-galerija visible" src="slike/slika-hero.jpg" alt="Radovi 4">
+        <img class="slika-galerija hidden" src="slike/slika-hero.jpg" alt="Radovi 5">
+        <img class="slika-galerija hidden" src="slike/slika-hero.jpg" alt="Radovi 6">
+        <img class="slika-galerija hidden" src="slike/slika-hero.jpg" alt="Radovi 7">
+        <img class="slika-galerija hidden" src="slike/slika-hero.jpg" alt="Radovi 8">
+        <img class="slika-galerija hidden" src="slike/slika-hero.jpg" alt="Radovi 9">
+        <img class="slika-galerija hidden" src="slike/slika-hero.jpg" alt="Radovi 10">
+        <img class="slika-galerija hidden" src="slike/slika-hero.jpg" alt="Radovi 11">
+        <img class="slika-galerija hidden" src="slike/slika-hero.jpg" alt="Radovi 12">
+    </div>
+    
+    <div class="galerija-dugme-container">
+        <button class="galerija-dugme" id="galerija-load-btn">
+            Učitaj više radova
+            <span class="galerija-strelica">↓</span>
+        </button>
+    </div>
+  </div>
+
+<footer id="kontakt" class="footer">
+  <div class="footer-container">
+    <!-- Left Column - About -->
+    <div class="footer-column">
+      <h2 class="footer-title">Kod Kefija</h2>
+      <p class="footer-item">
+        <span class="icon">📞</span>
+        <a href="tel:+381631234567">+381 63 1234567</a>
+      </p>
+      <p class="footer-item">
+        <span class="icon">✉️</span>
+        <a href="mailto:info@frizerskisalon.com">info@frizerskisalon.com</a>
+      </p>
+      <p class="footer-item">
+        <span class="icon">📍</span>
+        Carigradska 8, Radinac, Smederevo
+      </p>
+      <div class="footer-social">
+        <a href="https://instagram.com/kefi_barber2" target="_blank" class="footer-social-link" title="Instagram">📷</a>
+        <a href="https://facebook.com" target="_blank" class="footer-social-link" title="Facebook">f</a>
+        <a href="https://whatsapp.com" target="_blank" class="footer-social-link" title="WhatsApp">💬</a>
+      </div>
+    </div>
+
+    <!-- Middle Column - Quick Links -->
+    <div class="footer-column">
+      <h2 class="footer-title">Brzi linkovi</h2>
+      <p class="footer-item"><a href="#">Početna</a></p>
+      <p class="footer-item"><a href="#usluge">Usluge</a></p>
+      <p class="footer-item"><a href="#cenovnik">Cenovnik</a></p>
+      <p class="footer-item"><a href="#galerija">Galerija</a></p>
+      <p class="footer-item"><a href="#lokacija">Lokacija</a></p>
+    </div>
+
+    <!-- Right Column - Working Hours -->
+    <div class="footer-column">
+      <h2 class="footer-title">Radno vreme</h2>
+      <div class="footer-radno-vreme">
+        <div class="footer-radno-vreme-item">
+          <span class="footer-radno-vreme-dan">Ponedeljak</span>
+          <span class="footer-radno-vreme-vreme">08:00 - 18:00</span>
+        </div>
+        <div class="footer-radno-vreme-item">
+          <span class="footer-radno-vreme-dan">Utorak</span>
+          <span class="footer-radno-vreme-vreme">08:00 - 18:00</span>
+        </div>
+        <div class="footer-radno-vreme-item">
+          <span class="footer-radno-vreme-dan">Sreda</span>
+          <span class="footer-radno-vreme-vreme">08:00 - 18:00</span>
+        </div>
+        <div class="footer-radno-vreme-item">
+          <span class="footer-radno-vreme-dan">Četvrtak</span>
+          <span class="footer-radno-vreme-vreme">08:00 - 18:00</span>
+        </div>
+        <div class="footer-radno-vreme-item">
+          <span class="footer-radno-vreme-dan">Petak</span>
+          <span class="footer-radno-vreme-vreme">08:00 - 18:00</span>
+        </div>
+        <div class="footer-radno-vreme-item">
+          <span class="footer-radno-vreme-dan">Subota</span>
+          <span class="footer-radno-vreme-vreme">09:00 - 17:00</span>
+        </div>
+        <div class="footer-radno-vreme-item">
+          <span class="footer-radno-vreme-dan">Nedelja</span>
+          <span class="footer-radno-vreme-vreme">Zatvoreno</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Kod Kefija. Sva prava zadržana. | Frizerski salon</p>
+  </div>
+</footer>
+
+
+
+
+
+
+</body>
+</html>
+
